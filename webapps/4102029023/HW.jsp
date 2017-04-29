@@ -35,7 +35,19 @@ for(int r=0;r<skill.length;r++){
 else
 out.println("");
    %></td></tr>	
-   
+ 
+ <tr><td>您的程式經歷是:</td><td>
+<% request.setCharacterEncoding("utf-8");
+String[] coding=request.getParameterValues("coding") ;
+ if (coding != null) {
+for(int r=0;r<coding.length;r++){
+	out.print(coding[r]);
+	%><br><% 
+}
+}
+else
+out.println("");
+   %></td></tr> 
    
 <tr><td>您的性別是:</td><td><%
 	request.setCharacterEncoding("utf-8");
@@ -64,8 +76,13 @@ out.println("未選擇");
 <tr><td>您的自傳是:</td><td><%
 	request.setCharacterEncoding("utf-8");
 	String res=request.getParameter("res");
+	if (res != null) {
 	out.print(res);
-	%></td></tr></table>
+
+	}
+else
+out.println("未選擇");	%>
+	</td></tr></table>
 </CENTER>
 </BODY>
 </HTML>

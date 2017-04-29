@@ -23,6 +23,9 @@ background: -webkit-linear-gradient(top,#88c7f0,#7d7cc4) no-repeat;
   -webkit-border-radius: 7px;
   font-family:微軟正黑體;
 }
+
+select{border: 2px solid #fed264; padding:7px;font-size:15px;}
+
 input{border: 2px solid #fed264; padding:7px;font-size:15px;}
 textarea{border: 3px solid #fed264;font-size:15px;}
 .feedback-input:focus{
@@ -70,12 +73,19 @@ table,td
    <input type="radio" id="5" name="sex" value="男性" class="feedback-input">男
    <input type="radio" id="6" name="sex" value="女性" class="feedback-input">女<br><br>
    技能:<br><br>
-   <Select name="skill" Size="4"  Multiple>
+   <Select name="skill" Size="4" class="feedback-input"  Multiple>
 	<Option Value="Css">Css
 	<Option Value="Html">Html
 	<Option Value="JavaScript">JavaScript
 	<Option Value="JSP">JSP
 	</select><br><br>
+	程式經驗:<br><br>
+	<Select Name="coding" >
+	<Option Value="剛學會">剛學會
+	<Option Value="半年">半年
+	<Option Value="一年">一年
+	<Option Value="一年以上">一年以上
+</select><br><br>
    自傳：<br><br>
    <textarea type="text" name="res" id="three" class="feedback-input" placeholder="請輸入簡單自傳" style="height:150px;width:243px"></textarea><br><br>
 	
